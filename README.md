@@ -54,62 +54,6 @@ The primary objectives of this project are:
 
 The application compares the due date with the return date and calculates the fine based on the predefined fine policy.
 
-**Formula:**
-```
-Fine = Number of Late Days Ã— Fine Per Day
-```
-
-## Project Architecture
-
-```
-User
- â”‚
- â–¼
-Main Menu
- â”‚
- â”œâ”€â”€ Book Management
- â”œâ”€â”€ Search Module
- â”œâ”€â”€ Issue Module
- â”œâ”€â”€ Return Module
- â”œâ”€â”€ Fine Module
- â””â”€â”€ File Management
- â”‚
- â–¼
-Data Files
-```
-
-## Project Workflow
-
-```
-Start
- â”‚
- â–¼
-Load Existing Records
- â”‚
- â–¼
-Display Main Menu
- â”‚
- â–¼
-Select Operation
- â”‚
- â”œâ”€â”€ Add Book
- â”œâ”€â”€ Update Book
- â”œâ”€â”€ Delete Book
- â”œâ”€â”€ Search Book
- â”œâ”€â”€ View Books
- â”œâ”€â”€ Issue Book
- â”œâ”€â”€ Return Book
- â”œâ”€â”€ View Issued Books
- â”œâ”€â”€ Save
- â””â”€â”€ Exit
- â”‚
- â–¼
-Update Files
- â”‚
- â–¼
-End
-```
-
 ## Module Description
 
 ### Book Management Module
@@ -130,58 +74,6 @@ Calculates penalties for late returns using predefined rules and stores the calc
 ### File Management Module
 Responsible for reading and writing records to permanent storage using C file handling functions.
 
-## Data Structures
-
-### Book Structure
-```c
-typedef struct {
-    int bookId;
-    char title[100];
-    char author[50];
-    int quantity;
-} Book;
-```
-
-### Issue Structure
-```c
-typedef struct {
-    int issueId;
-    int bookId;
-    int userId;
-    char userName[50];
-    Date issueDate;
-    Date dueDate;
-    Date returnDate;
-    float fine;
-} Issue;
-```
-
-## File Organization
-
-```
-Library_Management_System/
-â”‚
-â”œâ”€â”€ include/
-â”‚   â”œâ”€â”€ book.h
-â”‚   â”œâ”€â”€ issue.h
-â”‚   â”œâ”€â”€ fine.h
-â”‚   â”œâ”€â”€ date.h
-â”‚   â””â”€â”€ common.h
-â”‚
-â”œâ”€â”€ src/
-â”‚   â”œâ”€â”€ main.c
-â”‚   â”œâ”€â”€ menu.c
-â”‚   â”œâ”€â”€ book.c
-â”‚   â”œâ”€â”€ issue.c
-â”‚   â”œâ”€â”€ fine.c
-â”‚   â””â”€â”€ date.c
-â”‚
-â”œâ”€â”€ data/
-â”‚   â”œâ”€â”€ books.dat
-â”‚   â””â”€â”€ issued.dat
-â”‚
-â””â”€â”€ README.md
-```
 
 ## Algorithms
 
@@ -229,18 +121,6 @@ Library_Management_System/
 - Pointers
 - File Handling
 - Modular Programming
-
-## Compilation
-
-```bash
-gcc src/*.c -Iinclude -o library
-```
-
-## Execution
-
-```bash
-./library
-```
 
 ## Future Enhancements
 
