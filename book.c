@@ -63,7 +63,7 @@ void save_books(void)
 {
 FILE *fp;
 
-fp = fopen("data/books.dat", "wb");
+fp = fopen("books.dat", "wb");
 
 if(fp == NULL)
 {
@@ -87,7 +87,7 @@ void load_books(void)
 FILE *fp;
 
 
-fp = fopen("data/books.dat", "rb");
+fp = fopen("books.dat", "rb");
 
 if(fp == NULL)
     return;
