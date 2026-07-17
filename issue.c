@@ -134,7 +134,7 @@ void save_issue(void)
 {
     FILE *fp;
 
-    fp=fopen("data/issue.dat","wb");
+    fp=fopen("issue.dat","wb");
 
     if(fp==NULL)
     {
@@ -155,7 +155,7 @@ void load_issue(void)
 {
     FILE *fp;
 
-    fp=fopen("data/issue.dat","rb");
+    fp=fopen("issue.dat","rb");
 
     if(fp==NULL)
         return;
